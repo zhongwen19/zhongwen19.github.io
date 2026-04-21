@@ -1,10 +1,7 @@
 const navLinks = document.querySelectorAll("[data-nav-target]");
 const sections = document.querySelectorAll(".content-section");
-const profileToggle = document.querySelector(".profile-toggle");
-const profileDetails = document.querySelector(".profile-details");
-const publicationsToggle = document.querySelector("[data-toggle-publications]");
-const extraPublications = document.querySelectorAll(".extra-publication");
 const placeholderLinks = document.querySelectorAll('a[href="#"]');
+const toggleButtons = document.querySelectorAll("[data-toggle-target]");
 
 function setActiveNav(sectionId) {
   navLinks.forEach((link) => {
@@ -18,16 +15,16 @@ if (sections.length) {
 
   const observer = new IntersectionObserver(
     (entries) => {
-      const visibleEntry = entries
+      const current = entries
         .filter((entry) => entry.isIntersecting)
         .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-      if (visibleEntry) {
-        setActiveNav(visibleEntry.target.id);
+      if (current) {
+        setActiveNav(current.target.id);
       }
     },
     {
-      rootMargin: "-25% 0px -55% 0px",
+      rootMargin: "-20% 0px -60% 0px",
       threshold: [0.2, 0.45, 0.7],
     }
   );
@@ -41,41 +38,18 @@ placeholderLinks.forEach((link) => {
   });
 });
 
-function syncProfilePanel() {
-  if (!profileToggle || !profileDetails) {
-    return;
-  }
+toggleButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetId = button.getAttribute("data-toggle-target");
+    const target = document.getElementById(targetId);
 
-  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+    if (!target) {
+      return;
+    }
 
-  if (isMobile) {
-    const expanded = profileToggle.getAttribute("aria-expanded") === "true";
-    profileDetails.classList.toggle("is-open", expanded);
-  } else {
-    profileDetails.classList.add("is-open");
-  }
-}
-
-if (profileToggle && profileDetails) {
-  profileToggle.addEventListener("click", () => {
-    const expanded = profileToggle.getAttribute("aria-expanded") === "true";
-    profileToggle.setAttribute("aria-expanded", String(!expanded));
-    profileToggle.textContent = expanded ? "Show details" : "Hide details";
-    syncProfilePanel();
+    const expanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!expanded));
+    button.textContent = expanded ? "[+]" : "[-]";
+    target.hidden = expanded;
   });
-
-  window.addEventListener("resize", syncProfilePanel);
-  syncProfilePanel();
-}
-
-if (publicationsToggle && extraPublications.length) {
-  publicationsToggle.addEventListener("click", () => {
-    const expanded = publicationsToggle.getAttribute("aria-expanded") === "true";
-    publicationsToggle.setAttribute("aria-expanded", String(!expanded));
-    publicationsToggle.textContent = expanded ? "Show more" : "Show less";
-
-    extraPublications.forEach((item) => {
-      item.classList.toggle("is-hidden", expanded);
-    });
-  });
-}
+});

@@ -1,13 +1,30 @@
 const navLinks = document.querySelectorAll("[data-nav-target]");
 const sections = document.querySelectorAll(".content-section");
 const placeholderLinks = document.querySelectorAll('a[href="#"]');
-const toggleButtons = document.querySelectorAll("[data-toggle-target]");
+const navToggle = document.querySelector(".nav-toggle");
+const topNav = document.querySelector(".topnav");
+const publicationToggle = document.querySelector("[data-publication-toggle]");
+const extraPublications = document.querySelectorAll("[data-publication-extra]");
 
 function setActiveNav(sectionId) {
   navLinks.forEach((link) => {
     const isActive = link.getAttribute("href") === `#${sectionId}`;
     link.classList.toggle("active", isActive);
+    if (isActive) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
   });
+}
+
+function closeMobileNav() {
+  if (!navToggle || !topNav) {
+    return;
+  }
+
+  navToggle.setAttribute("aria-expanded", "false");
+  topNav.classList.remove("is-open");
 }
 
 if (sections.length) {
@@ -24,12 +41,32 @@ if (sections.length) {
       }
     },
     {
-      rootMargin: "-20% 0px -60% 0px",
-      threshold: [0.2, 0.45, 0.7],
+      rootMargin: "-18% 0px -58% 0px",
+      threshold: [0.2, 0.4, 0.6],
     }
   );
 
   sections.forEach((section) => observer.observe(section));
+}
+
+if (navToggle && topNav) {
+  navToggle.addEventListener("click", () => {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!expanded));
+    topNav.classList.toggle("is-open", !expanded);
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMobileNav();
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 840) {
+      closeMobileNav();
+    }
+  });
 }
 
 placeholderLinks.forEach((link) => {
@@ -38,18 +75,15 @@ placeholderLinks.forEach((link) => {
   });
 });
 
-toggleButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const targetId = button.getAttribute("data-toggle-target");
-    const target = document.getElementById(targetId);
+if (publicationToggle && extraPublications.length) {
+  publicationToggle.addEventListener("click", () => {
+    const expanded = publicationToggle.getAttribute("aria-expanded") === "true";
+    publicationToggle.setAttribute("aria-expanded", String(!expanded));
+    publicationToggle.textContent = expanded ? "Show more" : "Show less";
 
-    if (!target) {
-      return;
-    }
-
-    const expanded = button.getAttribute("aria-expanded") === "true";
-    button.setAttribute("aria-expanded", String(!expanded));
-    button.textContent = expanded ? "[+]" : "[-]";
-    target.hidden = expanded;
+    extraPublications.forEach((item) => {
+      item.hidden = expanded;
+      item.classList.toggle("is-revealed", !expanded);
+    });
   });
-});
+}

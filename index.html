@@ -7,7 +7,7 @@
   <meta name="title" content="Wen Zhong (&#38047;&#25991;)">
   <meta
     name="description"
-    content="Wen Zhong (&#38047;&#25991;) is a PhD student at Tsinghua University working on MRI sequence development, diffusion MRI, image reconstruction, and real-time imaging."
+    content="Wen Zhong (&#38047;&#25991;) is a PhD student at Tsinghua University working on MRI sequence development, diffusion MRI, and real-time image reconstruction."
   >
   <meta property="og:type" content="website">
   <meta property="og:title" content="Wen Zhong (&#38047;&#25991;)">
@@ -21,21 +21,22 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="topbar-inner">
-      <a class="brand" href="#top">Wen Zhong</a>
+    <div class="site-header__inner">
+      <a class="site-brand" href="#hero">Wen Zhong</a>
       <button
-        class="nav-toggle"
+        class="site-nav-toggle"
         type="button"
         aria-expanded="false"
-        aria-controls="primary-nav"
+        aria-controls="site-nav"
         aria-label="Toggle navigation"
       >
         <span></span>
         <span></span>
       </button>
-      <nav class="topnav" id="primary-nav" aria-label="Primary">
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#hero" data-nav-target>Intro</a>
         <a href="#about" data-nav-target>About</a>
-        <a href="#research" data-nav-target>Research Interests</a>
+        <a href="#research" data-nav-target>Research</a>
         <a href="#tools" data-nav-target>Sequences / Tools</a>
         <a href="#projects" data-nav-target>Projects</a>
         <a href="#publications" data-nav-target>Publications</a>
@@ -45,74 +46,90 @@
     </div>
   </header>
 
-  <div class="page-shell">
-    <aside class="sidebar" aria-label="Profile">
-      <div class="profile-card">
-        <div class="portrait-wrap">
-          <img src="assets/portrait.jpg" alt="Portrait of Wen Zhong" class="portrait">
+  <div class="site-shell">
+    <aside class="profile-sidebar" aria-label="Profile panel">
+      <div class="profile-panel">
+        <div class="profile-panel__media">
+          <img src="assets/portrait.jpg" alt="Portrait of Wen Zhong" class="profile-avatar">
         </div>
 
-        <p class="profile-label">Academic Homepage</p>
-        <h1 class="profile-name">Wen Zhong</h1>
-        <p class="profile-name-zh">&#38047;&#25991;</p>
-        <p class="profile-role">PhD Student</p>
-        <p class="profile-affiliation">School of Biomedical Engineering, Tsinghua University</p>
-        <p class="profile-location">Beijing, China, 100084</p>
+        <div class="profile-panel__identity">
+          <p class="profile-panel__eyebrow">Academic Profile</p>
+          <h1 class="profile-panel__name">Wen Zhong</h1>
+          <p class="profile-panel__name-zh">&#38047;&#25991;</p>
+          <p class="profile-panel__role">PhD Student</p>
+          <p class="profile-panel__affiliation">School of Biomedical Engineering, Tsinghua University</p>
+          <p class="profile-panel__location">Beijing 100084, China</p>
+        </div>
 
-        <div class="profile-links">
+        <div class="profile-panel__actions">
+          <a class="button button--soft" href="mailto:zhongw23@mails.tsinghua.edu.cn">Email</a>
           <a
-            class="action-link"
+            class="button button--soft"
             href="https://scholar.google.com/citations?user=suoG1N4AAAAJ&hl=en"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Scholar
+            Google Scholar
           </a>
           <a
-            class="action-link"
+            class="button button--soft"
             href="https://github.com/zhongwen19"
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
           </a>
-          <a class="action-link" href="assets/Wen_Zhong_CV.pdf" target="_blank" rel="noopener noreferrer">
+          <a
+            class="button button--soft"
+            href="assets/Wen_Zhong_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             CV
-          </a>
-          <a class="action-link" href="mailto:zhongw23@mails.tsinghua.edu.cn">
-            Email
           </a>
         </div>
 
-        <div class="profile-meta">
-          <p class="profile-meta-label">Research Focus</p>
-          <p class="profile-interest">
-            MRI sequence development, diffusion MRI, image reconstruction and real-time imaging
-          </p>
-        </div>
+        <dl class="profile-panel__meta">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:zhongw23@mails.tsinghua.edu.cn">zhongw23@mails.tsinghua.edu.cn</a></dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>MRI sequence development, diffusion MRI, and real-time image reconstruction</dd>
+          </div>
+        </dl>
       </div>
     </aside>
 
-    <main class="content">
-      <section class="hero-card" id="top" aria-labelledby="hero-title">
-        <p class="hero-kicker">Academic Homepage</p>
-        <div class="hero-layout">
-          <div class="hero-copy">
-            <h2 class="hero-title" id="hero-title">Wen Zhong</h2>
-            <p class="hero-name-zh">&#38047;&#25991;</p>
-            <p class="hero-role-line">PhD Student</p>
-            <p class="hero-affiliation">School of Biomedical Engineering, Tsinghua University</p>
-            <p class="hero-tagline">
+    <main class="page-content">
+      <section class="hero" id="hero">
+        <div class="hero-card">
+          <div class="hero-card__main">
+            <p class="section-label">Personal Academic Homepage</p>
+            <h2 class="hero-card__title">Wen Zhong</h2>
+            <p class="hero-card__name-zh">&#38047;&#25991;</p>
+            <div class="hero-card__headline">
+              <p>PhD Student</p>
+              <span aria-hidden="true"></span>
+              <p>School of Biomedical Engineering, Tsinghua University</p>
+            </div>
+            <p class="hero-card__location">Beijing 100084, China</p>
+            <p class="hero-card__tagline">
               MRI sequence development, diffusion MRI, and real-time image reconstruction
             </p>
-            <div class="hero-chips" aria-label="Key research areas">
-              <span class="chip">Diffusion MRI</span>
-              <span class="chip">Sequence Development</span>
-              <span class="chip">Real-Time Reconstruction</span>
+
+            <div class="tag-row hero-card__tags" aria-label="Highlight tags">
+              <span class="tag">Diffusion MRI</span>
+              <span class="tag">Sequence Development</span>
+              <span class="tag">Real-Time Reconstruction</span>
             </div>
-            <div class="hero-actions">
+
+            <div class="hero-card__actions">
+              <a class="button button--primary" href="mailto:zhongw23@mails.tsinghua.edu.cn">Email</a>
               <a
-                class="primary-button"
+                class="button button--soft"
                 href="https://scholar.google.com/citations?user=suoG1N4AAAAJ&hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -120,43 +137,52 @@
                 Google Scholar
               </a>
               <a
-                class="secondary-button"
+                class="button button--soft"
                 href="https://github.com/zhongwen19"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 GitHub
               </a>
-              <a class="secondary-button" href="assets/Wen_Zhong_CV.pdf" target="_blank" rel="noopener noreferrer">
+              <a
+                class="button button--soft"
+                href="assets/Wen_Zhong_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 CV
-              </a>
-              <a class="secondary-button" href="mailto:zhongw23@mails.tsinghua.edu.cn">
-                Email
               </a>
             </div>
           </div>
 
-          <div class="hero-note">
-            <p class="hero-note-label">Current Focus</p>
-            <p>
-              Research on Siemens-platform sequence development, advanced diffusion encoding,
-              high-resolution DWI, and real-time MRI methods for interventional applications.
-            </p>
+          <div class="hero-card__side">
+            <div class="hero-note-card">
+              <p class="section-label">Current Scope</p>
+              <p>
+                Research centered on Siemens-platform sequence development, advanced diffusion
+                encoding, high-resolution diffusion imaging, and real-time MRI methods for
+                interventional applications.
+              </p>
+            </div>
+            <div class="hero-note-card hero-note-card--compact">
+              <p class="section-label">Academic Focus</p>
+              <p>Diffusion MRI, sequence engineering, and practical reconstruction methods for advanced MRI studies.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="content-section" id="about">
+      <section class="page-section" id="about">
         <div class="section-heading">
-          <p class="section-kicker">About</p>
+          <p class="section-label">About</p>
           <h2>About</h2>
         </div>
-        <div class="section-body prose">
+        <div class="section-card section-card--prose">
           <p>
             I am a PhD student in MRI at the School of Biomedical Engineering, Tsinghua University.
-            My research focuses on MRI sequence development, real-time image reconstruction, and
-            diffusion MRI, with an emphasis on methods that are technically rigorous and practical
-            for advanced imaging studies.
+            My work centers on MRI sequence development, real-time image reconstruction, and
+            diffusion MRI, with an emphasis on methods that are technically rigorous and practically
+            useful for advanced imaging studies.
           </p>
           <p>
             I am advised by
@@ -167,563 +193,466 @@
             >
               Prof. Hua Guo
             </a>.
-            My current interests include sequence development on Siemens platforms, advanced
+            My research interests include sequence development on Siemens platforms, advanced
             diffusion encoding, high-resolution diffusion imaging, and real-time MRI methods for
             interventional applications.
           </p>
-          <p class="inline-action-row">
-            <span>You can find my CV here:</span>
-            <a class="secondary-button" href="assets/Wen_Zhong_CV.pdf" target="_blank" rel="noopener noreferrer">
-              Download CV
-            </a>
-          </p>
         </div>
       </section>
 
-      <section class="content-section" id="research">
+      <section class="page-section" id="research">
         <div class="section-heading">
-          <p class="section-kicker">Research Interests</p>
+          <p class="section-label">Research Interests</p>
           <h2>Research Interests</h2>
         </div>
-        <div class="section-body">
-          <ul class="interest-list">
-            <li>MRI Sequence Development</li>
-            <li>Diffusion MRI</li>
-            <li>Real-Time MRI Reconstruction</li>
-            <li>Advanced Diffusion Encoding</li>
-            <li>High-Resolution DWI</li>
-            <li>Interventional MRI</li>
-          </ul>
+        <div class="section-card">
+          <div class="tag-cloud" aria-label="Research interests">
+            <span class="tag tag--large">MRI Sequence Development</span>
+            <span class="tag tag--large">Diffusion MRI</span>
+            <span class="tag tag--large">Real-Time MRI Reconstruction</span>
+            <span class="tag tag--large">Advanced Diffusion Encoding</span>
+            <span class="tag tag--large">High-Resolution DWI</span>
+            <span class="tag tag--large">Interventional MRI</span>
+          </div>
         </div>
       </section>
 
-      <section class="content-section" id="tools">
+      <section class="page-section" id="tools">
         <div class="section-heading">
-          <p class="section-kicker">Sequences / Tools</p>
+          <p class="section-label">Sequences / Tools</p>
           <h2>Sequences / Tools</h2>
         </div>
-        <div class="section-body">
-          <p class="section-intro">
-            All sequences listed here are available upon application or academic collaboration.
-          </p>
-
-          <div class="tool-grid">
-            <article class="info-card tool-card">
-              <div class="card-chip-row">
-                <span class="chip chip-muted">Available upon request</span>
+        <div class="section-intro-card">
+          <p>All sequences listed here are available upon application or academic collaboration.</p>
+        </div>
+        <div class="tool-grid">
+          <article class="tool-card">
+            <div class="tool-card__badges">
+              <span class="badge">IDEA</span>
+              <span class="badge badge--muted">Available upon request</span>
+            </div>
+            <h3>External Diffusion Gradient wavEform</h3>
+            <p class="tool-card__subtitle">ep2d_edge</p>
+            <p class="tool-card__description">
+              A Siemens IDEA-based diffusion sequence that supports arbitrary external diffusion
+              waveforms for applications such as QTI, motion compensation, and OGSE.
+            </p>
+            <dl class="tool-card__meta">
+              <div>
+                <dt>Platform</dt>
+                <dd>VE11E</dd>
               </div>
-              <h3>External Diffusion Gradient wavEform</h3>
-              <p>
-                Supports arbitrary external diffusion waveforms for applications such as QTI,
-                motion compensation, and OGSE.
-              </p>
-              <dl class="meta-list">
-                <div>
-                  <dt>Platform</dt>
-                  <dd>VE11E</dd>
-                </div>
-                <div>
-                  <dt>Status</dt>
-                  <dd>Available upon application</dd>
-                </div>
-              </dl>
-            </article>
-
-            <article class="info-card tool-card tool-card-featured">
-              <div class="card-chip-row">
-                <span class="chip chip-accent">Featured</span>
-                <span class="chip">C2P</span>
-                <span class="chip chip-muted">Available upon request</span>
+              <div>
+                <dt>Status</dt>
+                <dd>Available upon request</dd>
               </div>
-              <h3>OGSE / PGSE C2P</h3>
-              <p>
-                Distributed through the C2P platform and used by more than 20 institutions.
-                Multiple publications have already been produced using this sequence at external
-                sites.
-              </p>
-              <p class="featured-note">Used by 20+ institutions</p>
-              <dl class="meta-list meta-list-strong">
-                <div>
-                  <dt>Platform</dt>
-                  <dd>VE11E, VE11C, XA20, XA30, XA50, XA60, XA61</dd>
-                </div>
-                <div>
-                  <dt>Status</dt>
-                  <dd>Distributed through the C2P platform</dd>
-                </div>
-                <div>
-                  <dt>Dedicated Versions</dt>
-                  <dd>CimaX and Connectom 2.0</dd>
-                </div>
-              </dl>
-            </article>
+            </dl>
+          </article>
 
-            <article class="info-card tool-card">
-              <div class="card-chip-row">
-                <span class="chip chip-muted">Available upon request</span>
+          <article class="tool-card tool-card--featured">
+            <div class="tool-card__featured-mark">Featured Sequence</div>
+            <div class="tool-card__badges">
+              <span class="badge badge--accent">Featured</span>
+              <span class="badge">C2P</span>
+              <span class="badge badge--muted">Application available</span>
+            </div>
+            <h3>OGSE / PGSE</h3>
+            <p class="tool-card__description">
+              A Siemens IDEA-based OGSE/PGSE diffusion sequence distributed through the C2P
+              platform. It has been used by more than 20 institutions, with multiple publications
+              produced using the sequence at external sites.
+            </p>
+            <p class="tool-card__highlight">Used by 20+ institutions</p>
+            <dl class="tool-card__meta">
+              <div>
+                <dt>Platform</dt>
+                <dd>VE11E, VE11C, XA20, XA30, XA50, XA60, XA61</dd>
               </div>
-              <h3>Interleaved EPI</h3>
-              <p>
-                An interleaved EPI sequence available on multiple Siemens software platforms.
-              </p>
-              <dl class="meta-list">
-                <div>
-                  <dt>Platform</dt>
-                  <dd>VE11E, VE11C, XA20, XA30</dd>
-                </div>
-                <div>
-                  <dt>Status</dt>
-                  <dd>Available upon academic collaboration</dd>
-                </div>
-              </dl>
-            </article>
+              <div>
+                <dt>Dedicated Versions</dt>
+                <dd>CimaX and Connectom 2.0</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>C2P available / Application available</dd>
+              </div>
+            </dl>
+          </article>
 
-            <article class="info-card tool-card">
-              <div class="card-chip-row">
-                <span class="chip chip-muted">Available upon request</span>
+          <article class="tool-card">
+            <div class="tool-card__badges">
+              <span class="badge">IDEA</span>
+              <span class="badge badge--muted">Available upon request</span>
+            </div>
+            <h3>Interleaved EPI</h3>
+            <p class="tool-card__description">
+              An interleaved EPI sequence available on multiple Siemens software platforms.
+            </p>
+            <dl class="tool-card__meta">
+              <div>
+                <dt>Platform</dt>
+                <dd>VE11E, VE11C, XA20, XA30</dd>
               </div>
-              <h3>SMSlab</h3>
-              <p>
-                A high-resolution, high-SNR 3D DWI sequence.
-              </p>
-              <dl class="meta-list">
-                <div>
-                  <dt>Platform</dt>
-                  <dd>VE11E and VE12U</dd>
-                </div>
-                <div>
-                  <dt>Status</dt>
-                  <dd>Available upon academic collaboration</dd>
-                </div>
-              </dl>
-              <p class="card-link-row">
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Related paper</a>
-              </p>
-            </article>
+              <div>
+                <dt>Status</dt>
+                <dd>Available upon request</dd>
+              </div>
+            </dl>
+          </article>
 
-            <article class="info-card tool-card">
-              <div class="card-chip-row">
-                <span class="chip chip-muted">Available upon request</span>
+          <article class="tool-card">
+            <div class="tool-card__badges">
+              <span class="badge">3D DWI</span>
+              <span class="badge badge--muted">Available upon request</span>
+            </div>
+            <h3>SMSlab</h3>
+            <p class="tool-card__description">
+              A high-resolution, high-SNR 3D DWI sequence.
+            </p>
+            <dl class="tool-card__meta">
+              <div>
+                <dt>Platform</dt>
+                <dd>VE11E, VE12U</dd>
               </div>
-              <h3>ptx 3D DWI</h3>
-              <p>
-                A pTx-enabled 3D DWI sequence.
-              </p>
-              <dl class="meta-list">
-                <div>
-                  <dt>Platform</dt>
-                  <dd>VE12U</dd>
-                </div>
-                <div>
-                  <dt>Status</dt>
-                  <dd>Available upon academic collaboration</dd>
-                </div>
-              </dl>
-            </article>
+              <div>
+                <dt>Status</dt>
+                <dd>Available upon request</dd>
+              </div>
+            </dl>
+            <div class="tool-card__actions">
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Related paper</a>
+            </div>
+          </article>
 
-            <article class="info-card tool-card">
-              <div class="card-chip-row">
-                <span class="chip">C2P</span>
-                <span class="chip chip-muted">Available upon request</span>
+          <article class="tool-card">
+            <div class="tool-card__badges">
+              <span class="badge">pTx</span>
+              <span class="badge badge--muted">Available upon request</span>
+            </div>
+            <h3>ptx 3D DWI</h3>
+            <p class="tool-card__description">
+              A pTx-enabled 3D DWI sequence.
+            </p>
+            <dl class="tool-card__meta">
+              <div>
+                <dt>Platform</dt>
+                <dd>VE12U</dd>
               </div>
-              <h3>PSF DWI C2P</h3>
-              <p>
-                A high-resolution distortion-free 2D DWI sequence available through C2P.
-              </p>
-              <dl class="meta-list">
-                <div>
-                  <dt>Platform</dt>
-                  <dd>VE11E and XA30</dd>
-                </div>
-                <div>
-                  <dt>Status</dt>
-                  <dd>Available through C2P</dd>
-                </div>
-              </dl>
-            </article>
-          </div>
+              <div>
+                <dt>Status</dt>
+                <dd>Available upon request</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-card__badges">
+              <span class="badge">C2P</span>
+              <span class="badge badge--muted">Application available</span>
+            </div>
+            <h3>PSF DWI</h3>
+            <p class="tool-card__description">
+              A high-resolution distortion-free 2D DWI sequence, available through C2P.
+            </p>
+            <dl class="tool-card__meta">
+              <div>
+                <dt>Platform</dt>
+                <dd>VE11E, XA30</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>C2P available / Application available</dd>
+              </div>
+            </dl>
+          </article>
         </div>
       </section>
 
-      <section class="content-section" id="projects">
+      <section class="page-section" id="projects">
         <div class="section-heading">
-          <p class="section-kicker">Projects</p>
+          <p class="section-label">Projects</p>
           <h2>Projects</h2>
         </div>
-        <div class="section-body">
-          <div class="project-grid">
-            <article class="info-card project-card">
-              <p class="project-time">Sep. 2022 - Jun. 2023</p>
-              <h3>
-                Comparative Study of PSF and TGSE-BLADE Sequences for Diffusion-Weighted Imaging
-                of Skull Base Tumors
-              </h3>
-              <p>
-                Developed and optimized a PSF DWI sequence on Siemens Prisma 3T and carried out a
-                prospective patient study comparing PSF DWI and TGSE-BLADE DWI for skull base tumor
-                imaging.
-              </p>
-              <div class="card-link-row">
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Poster</a>
-              </div>
-            </article>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-card__meta">
+              <p>Sep. 2022 - Jun. 2023</p>
+            </div>
+            <h3>Comparative Study of PSF and TGSE-BLADE Sequences for Diffusion-Weighted Imaging of Skull Base Tumors</h3>
+            <p>
+              Developed and optimized a PSF DWI sequence on Siemens Prisma 3T for skull base tumor
+              imaging. Conducted a prospective patient study comparing PSF DWI and TGSE-BLADE DWI
+              in a clinically relevant setting.
+            </p>
+            <div class="project-card__actions">
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Paper</a>
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Abstract</a>
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Poster</a>
+            </div>
+          </article>
 
-            <article class="info-card project-card">
-              <p class="project-time">May 2024 - Nov. 2024</p>
-              <h3>
-                Development and Evaluation of a Second-Order Motion-Compensated 3D Spiral
-                Acquisition for Robust Whole-Brain DWI
-              </h3>
-              <p>
-                Developed a second-order motion-compensated 3D spiral DWI sequence using Pulseq and
-                investigated its feasibility for high-quality whole-brain DWI without cardiac
-                gating, including evaluation of SNR and SNR efficiency against other DWI methods.
-              </p>
-              <div class="card-link-row">
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Manuscript</a>
-              </div>
-            </article>
+          <article class="project-card">
+            <div class="project-card__meta">
+              <p>May 2024 - Nov. 2024</p>
+            </div>
+            <h3>Development and Evaluation of a Second-Order Motion-Compensated 3D Spiral Acquisition for Robust Whole-Brain DWI</h3>
+            <p>
+              Developed a second-order motion-compensated 3D spiral DWI sequence using Pulseq and
+              investigated its feasibility for high-quality whole-brain DWI without cardiac gating.
+              Evaluated SNR and SNR efficiency against other DWI methods.
+            </p>
+            <div class="project-card__actions">
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Paper</a>
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Abstract</a>
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Manuscript</a>
+            </div>
+          </article>
 
-            <article class="info-card project-card">
-              <p class="project-time">Jun. 2024 - Nov. 2024</p>
-              <h3>
-                Investigation and Development of OGSE Sequence for Microstructure Imaging on the
-                Connectom 2.0 High-Performance 3T Platform
-              </h3>
-              <p>
-                Optimized OGSE timing and protocol for the Connectom 2.0 system, acquired
-                high-quality phantom and in-vivo data, and focused on efficient diffusion
-                microstructure imaging.
-              </p>
-              <div class="card-link-row">
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Poster</a>
-              </div>
-            </article>
+          <article class="project-card">
+            <div class="project-card__meta">
+              <p>Jun. 2024 - Nov. 2024</p>
+            </div>
+            <h3>Investigation and Development of OGSE Sequence for Microstructure Imaging on the Connectom 2.0 High-Performance 3T Platform</h3>
+            <p>
+              Optimized OGSE timing and protocol for the Connectom 2.0 system, acquired
+              high-quality phantom and in-vivo data, and focused on efficient diffusion
+              microstructure imaging on a high-performance 3T platform.
+            </p>
+            <div class="project-card__actions">
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Paper</a>
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Abstract</a>
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Poster</a>
+            </div>
+          </article>
 
-            <article class="info-card project-card">
-              <div class="project-topline">
-                <p class="project-time">Dec. 2024 - Present</p>
-                <span class="chip chip-accent">Ongoing</span>
-              </div>
-              <h3>
-                Investigation and Development of Low-Field MRI-Guided Real-Time Imaging in Cardiac
-                Ablation Intervention Surgery
-              </h3>
-              <p>
-                Ongoing work on low-field MRI-guided real-time imaging for cardiac intervention,
-                including reconstruction and system optimization for faster and clearer guidance
-                imaging.
-              </p>
-              <div class="card-link-row">
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Poster</a>
-                <a class="link-pill is-muted" href="#" aria-disabled="true">Manuscript</a>
-              </div>
-            </article>
-          </div>
+          <article class="project-card">
+            <div class="project-card__meta project-card__meta--split">
+              <p>Dec. 2024 - Present</p>
+              <span class="badge badge--accent">Ongoing</span>
+            </div>
+            <h3>Investigation and Development of Low-Field MRI-Guided Real-Time Imaging in Cardiac Ablation Intervention Surgery</h3>
+            <p>
+              Ongoing work on real-time MRI monitoring for cardiac intervention. The project
+              focuses on reconstruction and system optimization for faster and clearer guidance
+              imaging in low-field MRI-guided procedures.
+            </p>
+            <div class="project-card__actions">
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Abstract</a>
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Poster</a>
+              <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Manuscript</a>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section class="content-section" id="publications">
+      <section class="page-section" id="publications">
         <div class="section-heading">
-          <p class="section-kicker">Publications</p>
+          <p class="section-label">Publications</p>
           <h2>Publications</h2>
         </div>
-        <div class="section-body">
-          <p class="section-intro">My name is highlighted in bold.</p>
 
-          <div class="publication-group">
-            <div class="publication-group-heading">
+        <div class="publication-group">
+          <div class="publication-group__header">
+            <div>
+              <p class="section-label">Selected Category</p>
               <h3>First-Author Publications</h3>
             </div>
-
-            <ol class="publication-list">
-              <li class="publication-item">
-                <article class="publication-card">
-                  <h4>Point spread function (PSF) encoding EPI versus BLADE DWI in brain tumor diagnosis</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    <strong>Wen Zhong</strong>, Lian Y, Hang Z, Zhao M, Zhou K, Zhang X, Weng D,
-                    Wang Y, Yang Y, Zhang Y, Guo H.
-                  </p>
-                  <p class="publication-meta">
-                    <em>Proceedings of the 32nd annual meeting of ISMRM</em>, Singapore, 2024.
-                    p. 3499. (Digital Poster)
-                  </p>
-                </article>
-              </li>
-              <li class="publication-item">
-                <article class="publication-card">
-                  <h4>A flexible and efficient acquisition method for diffusion microstructural imaging</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    <strong>Wen Zhong</strong>, Shi D, Guo J, Zhang X, Liu J, Zhang K, Yang X,
-                    Guo H.
-                  </p>
-                  <p class="publication-meta">
-                    <em>Proceedings of the ISMRM Workshop on 40 Years of Diffusion</em>, Kyoto,
-                    Japan, 2025. (Power Pitch)
-                  </p>
-                </article>
-              </li>
-              <li class="publication-item">
-                <article class="publication-card">
-                  <h4>Do second-order motion-compensation gradients and spiral sampling suppress phase variations in DWI</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    <strong>Wen Zhong</strong>, Jiang Y, Guo H.
-                  </p>
-                  <p class="publication-meta">
-                    <em>Proceedings of the 33rd annual meeting of ISMRM</em>, Honolulu, HI, United
-                    States, 2025. No. 5950. (Digital Poster)
-                  </p>
-                </article>
-              </li>
-              <li class="publication-item">
-                <article class="publication-card">
-                  <h4>Simulated Analysis of SNR and SNR efficiency in motion compensated single-slab DWI, multislab, SMSlab and 2D SMS EPI Techniques</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    <strong>Wen Zhong</strong>, Jiang Y, Guo H.
-                  </p>
-                  <p class="publication-meta">
-                    <em>Proceedings of the 33rd annual meeting of ISMRM</em>, Honolulu, HI, United
-                    States, 2025. No. 5951. (Digital Poster)
-                  </p>
-                </article>
-              </li>
-            </ol>
           </div>
+          <div class="publication-stack">
+            <article class="publication-card">
+              <h4>Point spread function (PSF) encoding EPI versus BLADE DWI in brain tumor diagnosis</h4>
+              <p class="publication-card__authors">
+                <strong>Wen Zhong</strong>, Lian Y, Hang Z, Zhao M, Zhou K, Zhang X, Weng D, Wang Y,
+                Yang Y, Zhang Y, Guo H.
+              </p>
+              <p class="publication-card__venue">
+                Proceedings of the 32nd annual meeting of ISMRM, Singapore, 2024. p. 3499. (digital poster)
+              </p>
+              <div class="publication-card__actions">
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Paper</a>
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">DOI</a>
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Abstract</a>
+              </div>
+            </article>
 
-          <div class="publication-group">
-            <div class="publication-group-heading">
+            <article class="publication-card">
+              <h4>A flexible and efficient acquisition method for diffusion microstructural imaging</h4>
+              <p class="publication-card__authors">
+                <strong>Wen Zhong</strong>, Shi D, Guo J, Zhang X, Liu J, Zhang K, Yang X, Guo H.
+              </p>
+              <p class="publication-card__venue">
+                Proceedings of the ISMRM Workshop on 40 Years of Diffusion, Kyoto, Japan, 2025. (power pitch)
+              </p>
+              <div class="publication-card__actions">
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Paper</a>
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">DOI</a>
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Abstract</a>
+              </div>
+            </article>
+
+            <article class="publication-card">
+              <h4>Do second-order motion-compensation gradients and spiral sampling suppress phase variations in DWI</h4>
+              <p class="publication-card__authors">
+                <strong>Wen Zhong</strong>, Jiang Y, Guo H.
+              </p>
+              <p class="publication-card__venue">
+                Proceedings of the 33rd annual meeting of ISMRM, Honolulu, HI, United States, 2025. No. 5950. (digital poster)
+              </p>
+              <div class="publication-card__actions">
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Paper</a>
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">DOI</a>
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Abstract</a>
+              </div>
+            </article>
+
+            <article class="publication-card">
+              <h4>Simulated Analysis of SNR and SNR efficiency in motion compensated single-slab DWI, multislab, SMSlab and 2D SMS EPI Techniques</h4>
+              <p class="publication-card__authors">
+                <strong>Wen Zhong</strong>, Jiang Y, Guo H.
+              </p>
+              <p class="publication-card__venue">
+                Proceedings of the 33rd annual meeting of ISMRM, Honolulu, HI, United States, 2025. No. 5951. (digital poster)
+              </p>
+              <div class="publication-card__actions">
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Paper</a>
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">DOI</a>
+                <a class="mini-button mini-button--muted" href="#" aria-disabled="true">Abstract</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="publication-group">
+          <div class="publication-group__header">
+            <div>
+              <p class="section-label">Selected Category</p>
               <h3>Other Publications</h3>
-              <button
-                class="section-toggle"
-                type="button"
-                data-publication-toggle
-                aria-expanded="false"
-              >
-                Show more
-              </button>
             </div>
+            <button class="button button--soft publication-toggle" type="button" data-publication-toggle aria-expanded="false">
+              Show more
+            </button>
+          </div>
 
-            <ol class="publication-list">
-              <li class="publication-item">
-                <article class="publication-card">
-                  <h4>Effects of diffusion MRI spatial resolution on human brain short-range association fiber reconstruction and structural connectivity estimation</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    Zheng J, Li Z, <strong>Wen Zhong</strong>, Wang Z, Li Z, Yang H, et al.
-                  </p>
-                  <p class="publication-meta"><em>Imaging Neuroscience</em>. 2026.</p>
-                </article>
-              </li>
-              <li class="publication-item">
-                <article class="publication-card">
-                  <h4>Complementary Sensitivity of Fixed-Time and Fixed-Oscillation Regimes to Exchange and Structural Disorder in the Human Brain Revealed Using Oscillating-Gradient Diffusion MRI With Ultra-Strong Gradients</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    Sung D, Chan K, Gerold J, <strong>Wen Zhong</strong>, Zheng J, Tian Q, et al.
-                  </p>
-                  <p class="publication-meta"><em>Magnetic Resonance in Medicine</em>. 2026.</p>
-                </article>
-              </li>
-              <li class="publication-item">
-                <article class="publication-card">
-                  <h4>Comprehensive 4D Parallel Transmission Spatial-Spectral Pulse Design for Slab-Selective Uniform Water-Selective Excitation: Demonstration in the Human Brain at 7 Tesla</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    Shao X, Zhang Z, <strong>Wen Zhong</strong>, Guo H, Ugurbil K, Wu X.
-                  </p>
-                  <p class="publication-meta">
-                    <em>Magnetic Resonance in Medicine</em>. 2026;95(4):2052-62.
-                  </p>
-                </article>
-              </li>
-              <li class="publication-item">
-                <article class="publication-card">
-                  <h4>Comparison of MR cytometry methods in predicting immunohistochemical factor status and molecular subtypes of breast cancer</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    Wu L, Liu F, Li S, Luo X, Wang Y, <strong>Wen Zhong</strong>, et al.
-                  </p>
-                  <p class="publication-meta">
-                    <em>Radiology and Oncology</em>. 2025;59(3):337-48.
-                  </p>
-                </article>
-              </li>
-              <li class="publication-item">
-                <article class="publication-card">
-                  <h4>Evaluating the diagnostic performance of MR cytometry imaging in differentiating benign and malignant breast tumors</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    Liu F, Wu L, Luo X, Li S, Wang Y, <strong>Wen Zhong</strong>, et al.
-                  </p>
-                  <p class="publication-meta">
-                    <em>Journal of Magnetic Resonance Imaging</em>. 2025;62(2):521-33.
-                  </p>
-                </article>
-              </li>
-              <li class="publication-item publication-item-extra" data-publication-extra hidden>
-                <article class="publication-card">
-                  <h4>Multishot dual polarity GRAPPA: Robust nyquist ghost correction for multishot EPI</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    Jiang Y, Jun Y, Liu Q, <strong>Wen Zhong</strong>, Rathi Y, Guo H, et al.
-                  </p>
-                  <p class="publication-meta"><em>Magnetic Resonance in Medicine</em>. 2025.</p>
-                </article>
-              </li>
-              <li class="publication-item publication-item-extra" data-publication-extra hidden>
-                <article class="publication-card">
-                  <h4>Revealing Diffusion Frequency-Dependence in Surface-to-Volume Ratio limit using OGSE sequence on the Connectome 2.0 Scanner</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    Zheng J, <strong>Wen Zhong</strong>, Sung D, Gerold J, Tian Q, Guo H, Huang S,
-                    Lee H.
-                  </p>
-                  <p class="publication-meta">
-                    <em>Proceedings of the 33rd annual meeting of ISMRM</em>, Honolulu, HI, United
-                    States, 2025. No. 650. (Traditional Poster)
-                  </p>
-                </article>
-              </li>
-              <li class="publication-item publication-item-extra" data-publication-extra hidden>
-                <article class="publication-card">
-                  <h4>Revealing membrane integrity in human brain using oscillating-gradient diffusion sequence in two frequency-varying regimes</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    Sung D, <strong>Wen Zhong</strong>, Zheng J, Tian Q, Guo H, Huang S, Lee H.
-                  </p>
-                  <p class="publication-meta">
-                    Submitted to: <em>Proceedings of the 33rd annual meeting of ISMRM</em>,
-                    Honolulu, HI, United States, 2025. No. 2019. (Oral)
-                  </p>
-                </article>
-              </li>
-              <li class="publication-item publication-item-extra" data-publication-extra hidden>
-                <article class="publication-card">
-                  <h4>Self-navigated 3D Diffusion MRI using Simultaneous Multislab with multiband blipped-CAIPI</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    Xiao Y, <strong>Wen Zhong</strong>, Li Z, Shao X, Jiang Y, Wu W, Miller K,
-                    Guo H.
-                  </p>
-                  <p class="publication-meta">
-                    <em>Proceedings of the ISMRM Workshop on 40 Years of Diffusion</em>, Kyoto,
-                    Japan, 2025.
-                  </p>
-                </article>
-              </li>
-              <li class="publication-item publication-item-extra" data-publication-extra hidden>
-                <article class="publication-card">
-                  <h4>Robust Nyquist ghost correction for high-resolution EPI using multishot dual-polarity GRAPPA reconstruction</h4>
-                  <div class="card-link-row">
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Paper</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">DOI</a>
-                    <a class="link-pill is-muted" href="#" aria-disabled="true">Abstract</a>
-                  </div>
-                  <p class="publication-authors">
-                    Jiang Y, Jun Y, Liu Q, <strong>Wen Zhong</strong>, Rathi Y, Guo H, Berkin B.
-                  </p>
-                  <p class="publication-meta">
-                    <em>Proceedings of the 33rd annual meeting of ISMRM</em>, Honolulu, HI, United
-                    States, 2025. No. 5068. (Oral)
-                  </p>
-                </article>
-              </li>
-            </ol>
+          <div class="publication-stack">
+            <article class="publication-card">
+              <h4>Effects of diffusion MRI spatial resolution on human brain short-range association fiber reconstruction and structural connectivity estimation</h4>
+              <p class="publication-card__authors">
+                Zheng J, Li Z, <strong>Wen Zhong</strong>, Wang Z, Li Z, Yang H, et al.
+              </p>
+              <p class="publication-card__venue">Imaging Neuroscience. 2026.</p>
+            </article>
+
+            <article class="publication-card">
+              <h4>Complementary Sensitivity of Fixed-Time and Fixed-Oscillation Regimes to Exchange and Structural Disorder in the Human Brain Revealed Using Oscillating-Gradient Diffusion MRI With Ultra-Strong Gradients</h4>
+              <p class="publication-card__authors">
+                Sung D, Chan K, Gerold J, <strong>Wen Zhong</strong>, Zheng J, Tian Q, et al.
+              </p>
+              <p class="publication-card__venue">Magnetic Resonance in Medicine. 2026.</p>
+            </article>
+
+            <article class="publication-card">
+              <h4>Comprehensive 4D Parallel Transmission Spatial-Spectral Pulse Design for Slab-Selective Uniform Water-Selective Excitation: Demonstration in the Human Brain at 7 Tesla</h4>
+              <p class="publication-card__authors">
+                Shao X, Zhang Z, <strong>Wen Zhong</strong>, Guo H, Ugurbil K, Wu X.
+              </p>
+              <p class="publication-card__venue">Magnetic Resonance in Medicine. 2026;95(4):2052-62.</p>
+            </article>
+
+            <article class="publication-card">
+              <h4>Comparison of MR cytometry methods in predicting immunohistochemical factor status and molecular subtypes of breast cancer</h4>
+              <p class="publication-card__authors">
+                Wu L, Liu F, Li S, Luo X, Wang Y, <strong>Wen Zhong</strong>, et al.
+              </p>
+              <p class="publication-card__venue">Radiology and Oncology. 2025;59(3):337-48.</p>
+            </article>
+
+            <article class="publication-card">
+              <h4>Evaluating the diagnostic performance of MR cytometry imaging in differentiating benign and malignant breast tumors</h4>
+              <p class="publication-card__authors">
+                Liu F, Wu L, Luo X, Li S, Wang Y, <strong>Wen Zhong</strong>, et al.
+              </p>
+              <p class="publication-card__venue">Journal of Magnetic Resonance Imaging. 2025;62(2):521-33.</p>
+            </article>
+            <article class="publication-card publication-card--extra" data-publication-extra hidden>
+              <h4>Multishot dual polarity GRAPPA: Robust nyquist ghost correction for multishot EPI</h4>
+              <p class="publication-card__authors">
+                Jiang Y, Jun Y, Liu Q, <strong>Wen Zhong</strong>, Rathi Y, Guo H, et al.
+              </p>
+              <p class="publication-card__venue">Magnetic Resonance in Medicine. 2025.</p>
+            </article>
+
+            <article class="publication-card publication-card--extra" data-publication-extra hidden>
+              <h4>Revealing Diffusion Frequency-Dependence in Surface-to-Volume Ratio limit using OGSE sequence on the Connectome 2.0 Scanner</h4>
+              <p class="publication-card__authors">
+                Zheng J, <strong>Wen Zhong</strong>, Sung D, Gerold J, Tian Q, Guo H, Huang S, Lee H.
+              </p>
+              <p class="publication-card__venue">
+                Proceedings of the 33rd annual meeting of ISMRM, Honolulu, HI, United States, 2025. No. 650. (traditional poster)
+              </p>
+            </article>
+
+            <article class="publication-card publication-card--extra" data-publication-extra hidden>
+              <h4>Revealing membrane integrity in human brain using oscillating-gradient diffusion sequence in two frequency-varying regimes</h4>
+              <p class="publication-card__authors">
+                Sung D, <strong>Wen Zhong</strong>, Zheng J, Tian Q, Guo H, Huang S, Lee H.
+              </p>
+              <p class="publication-card__venue">
+                Submitted to: Proceedings of the 33rd annual meeting of ISMRM, Honolulu, HI, United States, 2025. No. 2019. (oral)
+              </p>
+            </article>
+
+            <article class="publication-card publication-card--extra" data-publication-extra hidden>
+              <h4>Self-navigated 3D Diffusion MRI using Simultaneous Multislab with multiband blipped-CAIPI</h4>
+              <p class="publication-card__authors">
+                Xiao Y, <strong>Wen Zhong</strong>, Li Z, Shao X, Jiang Y, Wu W, Miller K, Guo H.
+              </p>
+              <p class="publication-card__venue">
+                Proceedings of the ISMRM Workshop on 40 Years of Diffusion, Kyoto, Japan, 2025.
+              </p>
+            </article>
+
+            <article class="publication-card publication-card--extra" data-publication-extra hidden>
+              <h4>Robust Nyquist ghost correction for high-resolution EPI using multishot dual-polarity GRAPPA reconstruction</h4>
+              <p class="publication-card__authors">
+                Jiang Y, Jun Y, Liu Q, <strong>Wen Zhong</strong>, Rathi Y, Guo H, Berkin B.
+              </p>
+              <p class="publication-card__venue">
+                Proceedings of the 33rd annual meeting of ISMRM, Honolulu, HI, United States, 2025. No. 5068. (oral)
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="content-section" id="cv">
+      <section class="page-section" id="cv">
         <div class="section-heading">
-          <p class="section-kicker">CV</p>
-          <h2>CV</h2>
+          <p class="section-label">CV</p>
+          <h2>Curriculum Vitae</h2>
         </div>
-        <div class="section-body">
-          <div class="info-card compact-card">
-            <p>A full curriculum vitae is available here.</p>
-            <a class="primary-button" href="assets/Wen_Zhong_CV.pdf" target="_blank" rel="noopener noreferrer">
-              Download CV
-            </a>
-          </div>
+        <div class="section-card section-card--action">
+          <p>A full curriculum vitae is available here.</p>
+          <a
+            class="button button--primary"
+            href="assets/Wen_Zhong_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download CV
+          </a>
         </div>
       </section>
 
-      <section class="content-section" id="contact">
+      <section class="page-section" id="contact">
         <div class="section-heading">
-          <p class="section-kicker">Contact</p>
+          <p class="section-label">Contact</p>
           <h2>Contact</h2>
         </div>
-        <div class="section-body">
-          <div class="info-card compact-card">
-            <p class="contact-email">
-              Email:
-              <a href="mailto:zhongw23@mails.tsinghua.edu.cn">zhongw23@mails.tsinghua.edu.cn</a>
-            </p>
-            <p>For academic collaboration or sequence-related inquiries, please contact me by email.</p>
-          </div>
+        <div class="section-card section-card--contact">
+          <p class="contact-line">
+            Email:
+            <a href="mailto:zhongw23@mails.tsinghua.edu.cn">zhongw23@mails.tsinghua.edu.cn</a>
+          </p>
+          <p>For academic collaboration or sequence-related inquiries, please contact me by email.</p>
         </div>
       </section>
     </main>

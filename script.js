@@ -27,7 +27,7 @@ function closeMobileNav() {
 }
 
 if (sections.length) {
-  setActiveNav("hero");
+  setActiveNav(sections[0].id);
 
   const observer = new IntersectionObserver(
     (entries) => {

@@ -2,7 +2,6 @@ const navLinks = document.querySelectorAll("[data-nav-target]");
 const sections = document.querySelectorAll("main section[id]");
 const navToggle = document.querySelector(".site-nav-toggle");
 const siteNav = document.querySelector(".site-nav");
-const placeholderLinks = document.querySelectorAll('a[href="#"]');
 const publicationToggle = document.querySelector("[data-publication-toggle]");
 const extraPublications = document.querySelectorAll("[data-publication-extra]");
 
@@ -69,19 +68,16 @@ if (navToggle && siteNav) {
   });
 }
 
-placeholderLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-  });
-});
-
 if (publicationToggle && extraPublications.length) {
+  const showMoreLabel = publicationToggle.dataset.showMoreLabel || "Show more";
+  const showLessLabel = publicationToggle.dataset.showLessLabel || "Show less";
+
   publicationToggle.addEventListener("click", () => {
     const expanded = publicationToggle.getAttribute("aria-expanded") === "true";
     const nextState = !expanded;
 
     publicationToggle.setAttribute("aria-expanded", String(nextState));
-    publicationToggle.textContent = nextState ? "Show less" : "Show more";
+    publicationToggle.textContent = nextState ? showLessLabel : showMoreLabel;
 
     extraPublications.forEach((item) => {
       item.hidden = !nextState;
